@@ -5,7 +5,7 @@ from fastapi import FastAPI, Request
 
 TOKEN = "8730984401:AAGohTP7eBoOUpnQhRFoh4pYk-3i6eQyapo"
 WEBHOOK_PATH = f"/webhook/{TOKEN}"
-WEBHOOK_URL = f"https://your-app.onrender.com{WEBHOOK_PATH}"
+WEBHOOK_URL = f"https://lover-service.onrender.com/webhook/{TOKEN}"
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
