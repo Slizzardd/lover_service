@@ -1,6 +1,7 @@
 from fastapi import FastAPI, Request
 from aiogram import Bot, Dispatcher, types
 from aiogram.filters import Command
+from fastapi.middleware.cors import CORSMiddleware
 
 TOKEN = "8730984401:AAGohTP7eBoOUpnQhRFoh4pYk-3i6eQyapo"
 WEBHOOK_PATH = f"/webhook/{TOKEN}"
@@ -10,7 +11,13 @@ MY_TG_ID = 5568565327
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
 app = FastAPI()
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],      # разрешаем все
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 # Команда /start
 @dp.message(Command("start"))
 async def start_handler(message: types.Message):
