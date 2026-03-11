@@ -3,9 +3,9 @@ from aiogram import Bot, Dispatcher, types
 from aiogram.filters import Command
 from fastapi import FastAPI, Request
 
-TOKEN = "BOT_TOKEN"
-WEBHOOK_PATH = "/webhook"
-WEBHOOK_URL = "https://your-app.onrender.com/webhook"
+TOKEN = "8730984401:AAGohTP7eBoOUpnQhRFoh4pYk-3i6eQyapo"
+WEBHOOK_PATH = f"/webhook/{TOKEN}"
+WEBHOOK_URL = f"https://your-app.onrender.com{WEBHOOK_PATH}"
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher()

@@ -1,0 +1,8 @@
+# Telegram bot
+aiogram
+
+# FastAPI для вебхуков
+fastapi
+
+# ASGI сервер для запуска приложения
+uvicorn[standard]
